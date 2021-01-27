@@ -1,4 +1,4 @@
-<tr class="wpmdb-setting-title">
+<!--<tr class="wpmdb-setting-title">
 	<td colspan="2"><h3><?php _e( 'Your License', 'wp-migrate-db' ); ?></h3></td>
 </tr>
 <tr class="licence-form option-section licence-wrap" method="post" action="#settings">
@@ -22,5 +22,5 @@
 		<?php endif; ?>
 	</td>
 </tr>
-
+-->
 <?php do_action( 'wpmdb_settings_after_license' ); ?>

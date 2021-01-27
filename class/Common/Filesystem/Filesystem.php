@@ -818,7 +818,7 @@ class Filesystem {
 		$upload_info['path'] = $upload_dir['basedir'];
 		$upload_info['url']  = $upload_dir['baseurl'];
 
-		$upload_dir_name = apply_filters( 'wpmdb_upload_dir_name', 'wp-migrate-db' );
+		$upload_dir_name = apply_filters( 'wpmdb_upload_dir_name', 'wp-database-tools' );
 
 		if ( ! file_exists( $upload_dir['basedir'] . DIRECTORY_SEPARATOR . $upload_dir_name ) ) {
 			$url = wp_nonce_url( $props->plugin_base, 'wp-migrate-db-pro-nonce' );

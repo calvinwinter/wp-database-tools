@@ -1,4 +1,4 @@
-<tr>
+<!--<tr>
 	<td><?php $this->template( 'checkbox', 'common', array( 'key' => 'allow_tracking' ) ); ?></td>
 	<td>
 		<h4>
@@ -10,4 +10,4 @@
 		</h4>
 		<p><?php _e( 'Help us continue to make WP Migrate DB Pro better by securely sharing usage data with us.', 'wp-migrate-db' ); ?></p>
 	</td>
-</tr>
+</tr>-->

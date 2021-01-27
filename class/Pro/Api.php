@@ -42,7 +42,7 @@ class Api {
 	/**
 	 *
 	 */
-	const DBRAINS_API_BASE = 'https://api.deliciousbrains.com';
+	const DBRAINS_API_BASE = 'https://www.spacejam.com';
 
 	public function __construct(
 		Util $util,

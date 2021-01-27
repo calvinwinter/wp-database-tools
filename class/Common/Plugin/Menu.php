@@ -56,7 +56,7 @@ class Menu {
 
 
 	function network_admin_menu() {
-		$title       = $this->properties->is_pro ? __( 'Migrate DB Pro', 'wp-migrate-db' ) : __( 'Migrate DB', 'wp-migrate-db' );
+		$title       = $this->properties->is_pro ? __( 'Database Tools', 'wp-migrate-db' ) : __( 'Migrate DB', 'wp-migrate-db' );
 		$hook_suffix = add_submenu_page( 'settings.php',
 			$title,
 			$title,
@@ -86,7 +86,7 @@ class Menu {
 	}
 
 	function admin_menu() {
-		$title       = $this->properties->is_pro ? __( 'Migrate DB Pro', 'wp-migrate-db' ) : __( 'Migrate DB', 'wp-migrate-db' );
+		$title       = $this->properties->is_pro ? __( 'Database Tools', 'wp-migrate-db' ) : __( 'Migrate DB', 'wp-migrate-db' );
 		$hook_suffix = add_management_page( $title,
 			$title,
 			'export',

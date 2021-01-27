@@ -15,7 +15,7 @@
 			<?php if ( $this->props->is_pro ): ?>
 				<tbody class="settings-advanced">
 				<tr class="wpmdb-setting-title">
-					<th colspan="2"><h3><?php _e( 'Advanced Settings', 'wp-migrate-db' ); ?></h3></th>
+				<!--	<th colspan="2"><h3><?php _e( 'Advanced Settings', 'wp-migrate-db' ); ?></h3></th>-->
 				</tr>
 				<?php do_action( 'wpmdb_additional_settings_advanced' ); ?>
 				</tbody>

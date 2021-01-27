@@ -1,17 +1,17 @@
 <?php
 /*
-Plugin Name: WP Migrate DB Pro
-Plugin URI: https://deliciousbrains.com/wp-migrate-db-pro/
-Description: Export, push, and pull to migrate your WordPress databases.
-Author: Delicious Brains
+Plugin Name: WP Database Tools
+Plugin URI: https://calvinwinter.ca
+Description: Find & replace, export, import, push, and pull your WordPress databases... for free! An GPL fork of Delicious Brain's WP Migrate DB Pro.
+Author: Calvin Winter
 Version: 1.9.13
-Author URI: https://deliciousbrains.com
+Author URI: https://calvinwinter.ca
 Network: True
-Text Domain: wp-migrate-db
+Text Domain: wp-database-tools
 Domain Path: /languages/
 */
 
-// Copyright (c) 2013 Delicious Brains. All rights reserved.
+// Copyright (c) 2021 Calvin Winter. All rights reserved.
 //
 // Released under the GPL license
 // http://www.opensource.org/licenses/gpl-license.php

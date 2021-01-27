@@ -148,7 +148,7 @@ class ProPluginManager extends PluginManagerBase {
 			return;
 		} ?>
 
-		<tr class="plugin-update-tr <?php echo $active; ?> wpmdbpro-custom">
+		<!--<tr class="plugin-update-tr <?php echo $active; ?> wpmdbpro-custom">
 			<td colspan="3" class="plugin-update">
 				<div class="update-message <?php echo $update_msg_classes; ?>">
 					<p>
@@ -157,7 +157,7 @@ class ProPluginManager extends PluginManagerBase {
 					</p>
 				</div>
 			</td>
-		</tr>
+		</tr>-->
 
 		<?php if ( $new_version ) { // removes the built-in plugin update message ?>
 			<script type="text/javascript">

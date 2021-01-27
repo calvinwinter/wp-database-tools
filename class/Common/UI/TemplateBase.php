@@ -82,14 +82,14 @@ class TemplateBase {
 				'slug'  => 'settings',
 				'title' => _x( 'Settings', 'Plugin configuration and preferences', 'wp-migrate-db' ),
 			],
-			[
+			/*[
 				'slug'  => 'addons',
 				'title' => _x( 'Addons', 'Plugin extensions', 'wp-migrate-db' ),
 			],
 			[
 				'slug'  => 'help',
 				'title' => _x( 'Help', 'Get help or contact support', 'wp-migrate-db' ),
-			],
+			],*/
 		];
 	}
 

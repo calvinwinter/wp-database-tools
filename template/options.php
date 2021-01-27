@@ -4,7 +4,7 @@
 	<h1 style="display:none;"></h1>
 
 	<div id="icon-tools" class="icon32"><br/></div>
-	<h1><?php _e( 'Migrate DB', 'wp-migrate-db' ); ?></h1>
+	<h1><?php _e( 'WP Database Tools', 'wp-migrate-db' ); ?></h1>
 
 	<h2 class="nav-tab-wrapper">
 		<?php $this->plugin_tabs() ?>

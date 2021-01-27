@@ -155,13 +155,13 @@ class Connection {
 
 		$state_data = $this->migration_state_manager->set_post_data( $key_rules );
 
-		if ( ! $this->license->is_valid_licence() ) {
+		/*if ( ! $this->license->is_valid_licence() ) {
 			$message = __( 'Please activate your license before attempting a pull or push migration.', 'wp-migrate-db' );
 			$return  = array( 'wpmdb_error' => 1, 'body' => $message );
 			$result  = $this->http->end_ajax( json_encode( $return ) );
 
 			return $result;
-		}
+		}*/
 
 		$data = array(
 			'action'  => 'wpmdb_verify_connection_to_remote_site',
@@ -298,7 +298,7 @@ class Connection {
 			return $result;
 		}
 
-		if ( ! $this->license->is_valid_licence() ) {
+		/*if ( ! $this->license->is_valid_licence() ) {
 			$local_host  = $this->util->get_short_home_address_from_url( home_url() );
 			$remote_host = $state_data['referer'];
 
@@ -311,7 +311,7 @@ class Connection {
 			$result            = $this->http->end_ajax( serialize( $return ) );
 
 			return $result;
-		}
+		}*/
 
 		if ( ! isset( $this->settings[ 'allow_' . $state_data['intent'] ] ) || $this->settings[ 'allow_' . $state_data['intent'] ] != true ) {
 			$return['error'] = 1;

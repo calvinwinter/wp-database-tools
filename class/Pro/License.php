@@ -300,7 +300,9 @@ class License {
 			return true;
 		}
 
-		return ( isset( $response['errors'] ) ) ? false : true;
+		//return ( isset( $response['errors'] ) ) ? false : true;
+
+		return true;
 	}
 
 	function is_licence_expired( $skip_transient_check = false ) {
@@ -337,7 +339,8 @@ class License {
 
 		set_site_transient( 'wpmdb_licence_response', $response, $this->props->transient_timeout );
 
-		return $response;
+		//return $response;
+		return true;
 	}
 
 
