@@ -1,4 +1,4 @@
-#WP Database Tools
+# WP Database Tools
 
 Find & replace, export, import, push, and pull your WordPress databases... for free! A GPL fork of Delicious Brain's WP Migrate DB Pro.
 
