@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: WP Database Tools
-Plugin URI: https://calvinwinter.ca
-Description: Find & replace, export, import, push, and pull your WordPress databases... for free! An GPL fork of Delicious Brain's WP Migrate DB Pro.
+Plugin URI: https://github.com/calvinwinter/wp-database-tools
+Description: Find & replace, export, import, push, and pull your WordPress databases.
 Author: Calvin Winter
-Version: 1.9.13
+Version: 1.9.13.1
 Author URI: https://calvinwinter.ca
 Network: True
 Text Domain: wp-database-tools
