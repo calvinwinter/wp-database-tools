@@ -9,6 +9,7 @@ Author URI: https://calvinwinter.ca
 Network: True
 Text Domain: wp-database-tools
 Domain Path: /languages/
+GitHub Plugin URI: https://github.com/calvinwinter/wp-database-tools
 */
 
 // Copyright (c) 2021 Calvin Winter. All rights reserved.
