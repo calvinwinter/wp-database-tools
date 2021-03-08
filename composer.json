@@ -1,0 +1,12 @@
+{
+    "name": "calvinwinter/wp-database-tools",
+    "description": "",
+    "keywords": ["wordpress", "plugin"],
+    "homepage": "https://github.com/calvinwinter/wp-database-tools",
+    "authors": [
+    ],
+    "type": "wordpress-plugin",
+    "require": {
+      "php": ">=5.6"
+    }
+  }
