@@ -23,7 +23,7 @@ GitHub Plugin URI: https://github.com/calvinwinter/wp-database-tools
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
 $wpmdb_base_path                                       = dirname( __FILE__ );
-$GLOBALS['wpmdb_meta']['wp-migrate-db-pro']['version'] = '1.9.13';
+$GLOBALS['wpmdb_meta']['wp-migrate-db-pro']['version'] = '1.9.14';
 $GLOBALS['wpmdb_meta']['wp-migrate-db-pro']['folder']  = basename( plugin_dir_path( __FILE__ ) );
 $GLOBALS['wpmdb_meta']['wp-migrate-db-pro']['abspath'] = $wpmdb_base_path;
 

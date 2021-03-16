@@ -32,13 +32,14 @@ class FileProcessor {
 	 *
 	 * @return array
 	 */
-	public function get_local_files( $directories, $abs_path, $excludes = array(), $stage ) {
+	public function get_local_files( $directories, $abs_path, $stage, $excludes = array() ) {
 		$count          = 0;
 		$total_size     = 0;
 		$files          = [];
 		$manifest       = [];
 		$is_single      = false;
 		$filtered_files = [];
+        $files_in_directory = [];
 
 		foreach ( $directories as $directory ) {
 			$file_size = 0;

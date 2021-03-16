@@ -107,14 +107,15 @@ class ProPluginManager extends PluginManagerBase {
 	 * @return  void
 	 */
 	function plugin_row( $plugin_path, $plugin_data ) {
-		$plugin_title       = $plugin_data['Name'];
-		$plugin_slug        = sanitize_title( $plugin_title );
-		$licence            = $this->license->get_licence_key();
-		$licence_response   = $this->license->is_licence_expired();
-		$licence_problem    = isset( $licence_response['errors'] );
-		$active             = is_plugin_active( $plugin_path ) ? 'active' : '';
-		$shiny_updates      = version_compare( get_bloginfo( 'version' ), '4.6-beta1-37926', '>=' );
-		$update_msg_classes = $shiny_updates ? 'notice inline notice-warning notice-alt post-shiny-updates' : 'pre-shiny-updates';
+        $plugin_title       = $plugin_data['Name'];
+        $plugin_slug        = sanitize_title($plugin_title);
+        $licence            = $this->license->get_licence_key();
+        $licence_response   = $this->license->is_licence_expired();
+        $licence_problem    = isset($licence_response['errors']);
+        $active             = is_plugin_active($plugin_path) ? 'active' : '';
+        $shiny_updates      = version_compare(get_bloginfo('version'), '4.6-beta1-37926', '>=');
+        $update_msg_classes = $shiny_updates ? 'notice inline notice-warning notice-alt post-shiny-updates' : 'pre-shiny-updates';
+        $colspan            = function_exists('wp_is_auto_update_enabled_for_type') && wp_is_auto_update_enabled_for_type('plugin') ? 4 : 3;
 
 		if ( ! isset( $GLOBALS['wpmdb_meta'][ $plugin_slug ]['version'] ) ) {
 			$installed_version = '0';
@@ -300,6 +301,10 @@ class ProPluginManager extends PluginManagerBase {
 				$trans->response[ $plugin_basename ]->new_version = $latest_version;
 				$trans->response[ $plugin_basename ]->id          = '0';
 				$trans->response[ $plugin_basename ]->plugin      = $plugin_basename;
+
+				if ( isset( $upgrade_data['requires_php'] ) ) {
+					$trans->response[ $plugin_basename ]->requires_php = $upgrade_data['requires_php'];
+				}
 			}
 		}
 

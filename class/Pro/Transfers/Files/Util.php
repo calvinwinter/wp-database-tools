@@ -332,7 +332,12 @@ class Util {
 		}
 
 		// Could be empty - stores progress of folder migrations between requests. Generally, the size of batch is 100 files and each file could be from a separate folder
-		$folder_transfer_status = get_site_option( 'wpmdb_folder_transfers_' . $state_data['migration_state_id'] );
+        $folder_transfer_status = get_site_option('wpmdb_folder_transfers_' . $state_data['migration_state_id']);
+
+        if (empty($folder_transfer_status)) {
+            $folder_transfer_status = [];
+        }
+
 		$total_transferred      = 0;
 		$batch_size             = 0;
 
@@ -374,17 +379,17 @@ class Util {
 				$folder_transfer_status[ $dirname ]['folder_percent_transferred'] = $folder_transfer_status[ $dirname ]['folder_transferred'] / $record['folder_size'];
 			}
 
-			$result_set[ $dirname ] = [
-				'nice_name'                  => $record['nice_name'],
-				'relative_path'              => DIRECTORY_SEPARATOR . $dirname,
-				'absolute_path'              => $record['folder_abs_path'],
-				'size'                       => $record['folder_size'],
-				'batch_size'                 => $batch_size,
-				'folder_transferred'         => $folder_transfer_status[ $dirname ]['folder_transferred'],
-				'folder_percent_transferred' => $folder_transfer_status[ $dirname ]['folder_percent_transferred'],
-				'total_transferred'          => $bytes_transferred,
-			];
-		}
+            $result_set[$dirname] = [
+                'nice_name'                  => $record['nice_name'],
+                'relative_path'              => DIRECTORY_SEPARATOR . $dirname,
+                'absolute_path'              => $record['folder_abs_path'],
+                'size'                       => $record['folder_size'],
+                'batch_size'                 => $batch_size,
+                'folder_transferred'         => isset($folder_transfer_status[$dirname]) ? $folder_transfer_status[$dirname]['folder_transferred'] : 0,
+                'folder_percent_transferred' => isset($folder_transfer_status[$dirname]['folder_percent_transferred']) ? $folder_transfer_status[$dirname]['folder_percent_transferred'] : 0,
+                'total_transferred'          => $bytes_transferred,
+            ];
+        }
 
 		$this->update_folder_status( $state_data, $result_set, $bytes_transferred );
 

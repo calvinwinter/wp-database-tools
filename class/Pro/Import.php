@@ -510,6 +510,11 @@ class Import {
 	public function convert_to_temp_query( $query ) {
 		$temp_prefix = $this->props->temp_prefix;
 
+		//Look for ansi quotes and replace them with back ticks
+		if ( substr( $query, 0, 14 ) === 'CREATE TABLE "' ) {
+			$query = $this->table->remove_ansi_quotes( $query );
+		}
+
 		if ( substr( $query, 0, 13 ) === 'INSERT INTO `' ) {
 			$query = Util::str_replace_first( 'INSERT INTO `', 'INSERT INTO `' . $temp_prefix, $query );
 		} elseif ( substr( $query, 0, 14 ) === 'CREATE TABLE `' ) {
